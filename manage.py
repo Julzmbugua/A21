@@ -1,5 +1,4 @@
 import os
-from flask import Flask, render_template
 from flask.ext.script import Manager, Shell
 from app import create_app
 
