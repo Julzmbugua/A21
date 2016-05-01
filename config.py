@@ -14,7 +14,7 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ILIST_MAIL_SUBJECT_PREFIX = '[iList]'
-    ILIST_LIST_MAIL_SENDER = 'ilist Admin <no-reply@ilist.com>'
+    ILIST_MAIL_SENDER = 'iList Admin <no-reply@ilist.com>'
     ILIST_ADMIN = os.environ.get('ILIST_ADMIN')
     
 
