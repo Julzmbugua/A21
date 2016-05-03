@@ -4,6 +4,13 @@ from flask import current_app
 from flask.ext.login import UserMixin
 from . import db, login_manager
 
+class Task(db.Model):
+    __tablename__ = 'tasks'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64))
+
+    def __repr__(self):
+        return '<Task %r>' % self.name
 
 class Role(db.Model):
     __tablename__ = 'roles'
