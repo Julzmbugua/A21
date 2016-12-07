@@ -1,0 +1,34 @@
+@main.route('/tasks_per_category/<int:id>', methods=['GET', 'POST'])
+def tasks_per_category(id):
+	username=current_user.username
+	user = User.query.filter_by(username=username).first()
+	cat = Category.query.all()
+
+	tasks=Task.query.filter_by(category_id=id).all()
+	
+
+	return render_template('my_tasks.html', tasks=tasks, user=user, cat=cat)
+
+	# @main.route('/tasks_per_category/<int:id>', methods=['GET', 'POST'])
+# def task(id):
+# 	cat = Category.query.all()
+	
+# 	category_id=Task.category_id
+# 	username=current_user.username
+# 	user = User.query.filter_by(username=username).first()
+# 	# tasks_per_category = Task.query.filter_by(category_id=category_id).all() 
+# 	form = AddTask()
+# 	if form.validate_on_submit():
+# 		task = Task(name=form.name.data,
+# 					prerequisites =form.prerequisites.data,
+# 					due_date=form.due_date.data,
+# 					user =current_user._get_current_object(),
+# 					category =category
+# 					)
+
+# 		db.session.add(task)
+		
+# 		return redirect(url_for('main.task'))
+# 	tasks = user.tasks.order_by(Task.due_date.asc()).all()
+
+# 	return render_template('my_tasks.html', form=form, tasks=tasks, user=user, cat=cat)

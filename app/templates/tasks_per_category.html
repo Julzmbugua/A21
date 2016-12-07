@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}  Tasks | {{ super() }} {% endblock %}
+
+{% block page_content %}
+
+<body class="task-page">
+  <div class ="add-category-section">
+    <div id="add-category-section">
+      <div class="clearfix">
+        <div class="btn-group-vertical">
+          
+          {% for category in cat %}
+          <a href="{{ url_for('main.tasks_per_category', id=category.id) }}" class="btn btn-primary">{{ category.name }} <span><h1></h1></span></a>
+          {% endfor %}
+        </div>
+      </div>
+      <form method="POST" action="/category">
+        <input type="text" name="category_name" placeholder ="Category" required /> <br><br>
+        <input type="submit" value="Add Category"/>
+      </form>
+    </div>
+  </div>
+  <div class="task-list-lines">
+    <div id="task-list">
+      {% for task in tasks %}
+      <table class="table">
+        <tr> <thead> <h5> {{ task.category.name }}</h5></thead></tr> <tr> <td>  <input type="radio"> {{ task.name }} </td><td align="right">  {{ task.due_date.strftime('%B, %d') }} </td>
+      <!--   <td align="left">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ url_for('main.task') }}">Edit task</a></li>
+                <li><a href="{{ url_for('auth.change_password') }}">Change priority</a></li>
+                <li><a href="{{ url_for('auth.change_email_request') }}">Reminders</a></li>
+                <li><a href="{{ url_for('auth.logout') }}">Delete task</a></li>
+            </ul>
+          </li>
+        </td> --></tr>
+      </table>
+      {% endfor %}
+      <div class="collapse" id="addTask">
+        <div class="well">
+         {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+      <a class="btn btn-primary" role="button" data-toggle="collapse" href="#addTask" aria-expanded="false" aria-controls="addTask"><strong>+</strong></a>
+    </div>
+  </div>
+</body>
+{% endblock %}

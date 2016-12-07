@@ -1,0 +1,178 @@
+div.navbar-header {
+  color: red;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+}
+
+body.home-page {
+  background-image: url(../static/indexBG11.jpg);
+  background-position:auto, no-repeat;
+  margin: 0;
+}
+
+
+body.task-page {
+  background-color:white;
+  background-position: center, no-repeat;
+  margin: 0%;
+
+}
+
+div.page-header{
+  color: yellow;
+  background-color: transparent;
+ }
+
+.add-category-section {
+  width:40%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  margin-left: auto;
+  float: left; 
+}
+ 
+.task-list-lines {
+  overflow-y: visible;
+  overflow-x: hidden;
+  width: 50%;
+  margin-top: none;
+  height: 100%;
+}
+.collapse {
+  background-color: none
+}
+
+.navbar {
+  min-height:10px !important;
+  height: 45px;
+  background-color: black;
+  border-radius:0;    
+}
+.navbar-brand img {
+  margin-top: -12px;
+  margin-left: 10px;
+  vertical-align: middle;
+  float: none;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  position: left;
+  width: 22px;
+  height: 2px;
+  background-color: #cccccc;
+  border-radius: 1px;
+}
+
+
+
+
+
+ul.navbar-right {
+  margin-right:auto;
+  margin-top: 0%;
+}
+
+input[type=text] {padding:5px; border:1px solid #ccc; 
+-webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+input[type=date] {
+  -webkit-border-radius: 0px;
+    border-radius: 0px;}
+input[type=text]:focus {border-color:#333; }
+
+input[type=submit] {
+  padding:5px 15px;
+  background:none;
+  cursor:pointer;
+  -webkit-border-radius: 0px;
+  border-radius: 0px; 
+  border: 1px solid #ccc;
+  }
+
+input { display: inline; }
+
+
+
+
+.btn-group-vertical {
+  width: 100%;
+}
+
+a.btn-primary {
+  color: black;
+  text-align: left;
+  border:0 none;
+  text-transform: capitalize;
+  background: none;
+}
+
+a.btn-index {
+  display: inline-block;
+  color: yellow;
+  border:0 none;
+  background: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 10px 30px;
+  /*border-radius: 5px;*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 2px solid rgba(0,0,0,0.3);
+}
+
+  a.btn:hover {
+    background-color: #e3e3e3;
+    /*border-color: rgba(0,0,0,0.5);*/
+  }
+  
+  a.btn:active {
+    background-color: #CCC;
+    /*border-color: rgba(0,0,0,0.9);*/
+  }
+
+  a.btn.btn-sign:hover {
+    background-color: #4F87A2;
+    /*border-color: rgba(0,0,0,0.5);*/
+  }
+  
+  a.btn.btn-sign:active {
+    background-color: #3C677B;
+    /*border-color: rgba(0,0,0,0.9);*/
+  }
+  .table {
+    border-bottom: none;
+   
+
+  }
+/*  .table-bordered {
+    
+    background-color: white;
+    width: 100px;
+    max-height: 10px*/
+    
+
+
+.td {
+  text-align: right;
+}
+.logo{
+  font-size: 30px;
+  vertical-align: middle;
+  margin: 0 40px;
+}
+
+
+/*
+input[value="Add Category"] {outline-color: yellow; border:none; background: none;}*/
+.dropdown-menu {
+  position: absolute;
+  /*float: right;
+  z-index: 999;*/
+}
+
+

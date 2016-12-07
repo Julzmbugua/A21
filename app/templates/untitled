@@ -1,0 +1,86 @@
+<html class="task-bg">
+    <div class="task-content"> 
+
+        <div class="page-header">
+            <h3>Hi, {{ current_user.username | capitalize }}  </h3>
+        </div>
+            <p> New Category? <a href="{{ url_for('main.category') }}"><h1> + </h1> </a>
+            </p>
+
+
+        <div class="col-md-2">
+          <div class="nav">
+
+            <ul> {{ wtf.quick_form(form) }}</ul>
+          </div>
+
+        </div> 
+
+
+    </div>
+
+    <table class="tasks">
+  <tr>
+    <th>Tasks</th>
+  </tr>
+   {% for task in tasks %}
+   <tr>
+      <td>
+             {{ task.name }}
+      </td>
+    
+    </tr>
+          {% endfor %}
+    
+</table>
+    
+<html>
+
+<style>
+
+th {
+    text-align: left;
+}
+table.tasks {
+  float: right;
+  width: 50%;
+  border:1px solid #d4d4d4;
+}
+table.tasks th, td { 
+    padding:10px;
+}
+table.tasks th {
+    width:40px;
+}
+}
+
+body {
+ margin: 0;
+ position: relative;
+ width: 100%;
+ padding-top: 2px;
+ background-color: beige;
+ /*background-size: 1440px 800px;
+ background-repeat:no-repeat;*/
+ display: compact;
+ 
+}
+
+
+div.section {
+  /*position:absolute;*/
+  top: 100px;
+  position: right;
+  text-align: left;
+  left: 400px;
+  right: 1440px
+  width: 100%;
+  color: green;
+  background-color: transparent;
+  font: 13px/18px "Helvetica Neue", sans-serif;
+}
+</style>
+
+
+
+{% endblock %}
